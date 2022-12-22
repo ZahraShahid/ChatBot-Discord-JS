@@ -1,8 +1,11 @@
-const {Client, GatewayIntentBits} = require("discord.js")
-const client = new Client({intents: [GatewayIntentBits.guilds,GatewayIntentBits.GuildMessages]})
+const Discord = require("discord.js");
+const {GatewayIntentBits} = require("discord.js")
+const {TOKEN} = require("./config")
+
+const client = new Discord.Client({intents: [GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages]})
 
 client.on("ready",()=>{
     console.log("Connected as "+ client.user.tag)
 })
 
-client.login("MTA1NTIzODc2NDUzODEwMTc3MA.GjHxLo.YWHix5aqvSCa1NqeDi10BQIMPHleoyBliKwrX8")
+client.login(TOKEN)
